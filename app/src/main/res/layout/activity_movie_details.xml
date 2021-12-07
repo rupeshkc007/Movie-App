@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:orientation="vertical"
+    tools:context=".MovieDetails"
+    android:animateLayoutChanges="true">
+
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/ytPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_movie_detail_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_movie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_poster_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="30"
+                        android:scaleType="centerInside" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="70"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:theme="@style/movie_item_text" />
+
+                        <TextView
+                            android:id="@+id/tv_language_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:theme="@style/movie_item_text" />
+
+                        <TextView
+                            android:id="@+id/tv_genres_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:theme="@style/movie_item_text" />
+
+                        <TextView
+                            android:id="@+id/tv_runtime_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:theme="@style/movie_item_text" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/imdb_bg"
+                                android:padding="5dp"
+                                android:shadowColor="@color/white"
+                                android:text="IMDb"
+                                android:textColor="@android:color/black"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:theme="@style/movie_item_text" />
+
+                            <TextView
+                                android:id="@+id/tv_rating_detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:theme="@style/movie_item_text" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_trailer_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bg_btn_selector"
+                            android:drawableLeft="@drawable/ic_trailer"
+                            android:padding="5dp"
+                            android:text="Watch Trailer"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_details"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Overview"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:shadowColor="@color/white"
+                        android:textColor="#4CAF50"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/tv_overview_detail"
+                        style="@style/movie_item_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

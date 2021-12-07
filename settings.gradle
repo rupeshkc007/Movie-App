@@ -1,0 +1,2 @@
+rootProject.name = "YTS_MX"
+include ':app'
